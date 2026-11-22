@@ -26,7 +26,7 @@ function tokenize(source){ //takes in source code
                 continue;
         }
 
-        if(/[a-zA-Z_]/.test(char)){
+        if(/[a-zA-Z_]/.test(char)){ //anything thats not a keyword and isnt a number or modulation becomes a variable/identifier
             let word = "";
 
             while (position < source.length && /[a-zA-Z0-9_]/.test(source[position])) {
@@ -62,7 +62,7 @@ function tokenize(source){ //takes in source code
             continue;
         }
         
-        throw new Error("Unexpected character gonk, chipper in already!! : $(char)");
+        throw new Error(`Unexpected character gonk, chipper in already!! : ${char}`);
 
     }
 

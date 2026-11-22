@@ -1,5 +1,11 @@
+//testing file
+
 const { tokenize } = require("./lexer");
+const { parse } = require("./parser")
 
 let source = "LET age = 16";
 
-console.log(tokenize(source))
+const tokens = tokenize(source);
+
+const ast = parse(tokens);
+console.log(ast)
